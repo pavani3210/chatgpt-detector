@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Files</title>
+    <style>
+        /* Center the content box */
+        body {
+            display: flex;
+            background-color: rgb(52, 51, 51);
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Style the content box */
+        .content-box {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Style the "Upload Files" button */
+        .upload-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Hide the file input element */
+        input[type="file"] {
+            display: none;
+        }
+
+        /* Style the file input label */
+        label {
+            display: block;
+            margin-top: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Style the accepted file types message */
+        .file-types {
+            color: #888;
+            font-size: 12px;
+        }
+
+        p {
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Conditional style for the <p> elements based on their IDs */
+        p.project {
+            margin: 10px;
+            background: #f0f0f0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        p.project {
+            margin: 10px;
+            background: #f0f0f0;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        p.project {
+            margin: 10px;
+            background: #f0f0f0;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box" style="background-color: white;">
+        <script>
+            var project = "gptzero"; // Initialize the project variable with "gptzero"
+        </script>
+        <h2>Upload your files</h2>
+        <p style="color:rgb(123, 123, 123, 75%); margin-top:5px;">File should be txt, docx, doc, pdf, zip</p>
+        <label for="file-input" class="upload-button">Select Files</label>
+        <input type="file" id="file-input" accept=".pdf, .docx, .zip">
+        <p class="file-types">Accepted file types: PDF, DOCX, ZIP</p>
+        <p class="file-types">Select One of the options Below</p>
+        <div style="display:flex; justify-content:center; align-items:center;">
+            // style p based on project variable
+            <p class="project" onclick="setProject('gptzero')">GPT ZERO</p>
+            <p class="project" onclick="setProject('BERT')">BERT</p>
+            <p class="project" onclick="setProject('gpt-2')">GPT-2</p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions go here
+        function setProject(selectedProject) {
+            project = selectedProject;
+
+            // Reset styling for all project options
+            const projectOptions = document.querySelectorAll('.project');
+            projectOptions.forEach(option => {
+                option.classList.remove('project');
+            });
+
+            // Add styling to the selected project option
+            const selectedOption = document.getElementById();
+            selectedOption.classList.add('project');
+        }
+    </script>
+</body>
+</html>
