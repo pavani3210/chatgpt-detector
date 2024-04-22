@@ -16,7 +16,7 @@ def main():
 
             if processed_file is not None:
                 st.success("File Processed Successfully ✅")
-                st.write("Download the below Output file")
+                st.write("Download the output file below")
                 download_button = st.download_button(
                 label="Download Processed File",
                 data=processed_file,
